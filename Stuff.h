@@ -5,14 +5,20 @@ using namespace std;
 class Stuff {
     public:
         Stuff();
-        Stuff(int, int, int);
+        void display();
 
-    private:
+    protected:
         int hp, mp, ac;
+        string spells[5];
+        string name, clas;
 };
 
-Stuff()
+Stuff::Stuff () {
+    hp = 0;
+    mp = 0;
+    ac = 0;
+}
 
-Stuff(int h, int m, int a) {
-    hp = h;
+void Stuff::display () {
+    cout << "Adventurer name: " << name << "\nAdventurer class: " << clas << "\nHP: " << hp << "\nMP: " << mp << "\nAC: " << ac << "\nSpell list: " << spells[0] << ", " << spells[1] << ", " << spells[2] << ", " << spells[3] << ", " << spells[4] << endl << endl;
 }
